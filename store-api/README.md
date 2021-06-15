@@ -2,7 +2,7 @@
 
 ## Descrição
 
-Repositório do front-end feito com Nest.js (Backend)
+Repositório da API Rest feito com Nest.js (Backend)
 
 **Importante**: A aplicação do Apache Kafka, Golang deve estar rodando primeiro.
 
