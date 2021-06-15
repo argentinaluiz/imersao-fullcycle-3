@@ -1,4 +1,4 @@
-# Imersão Full Stack & FullCycle - Codelivery
+# Imersão Full Stack & FullCycle - Codebank
 
 ## Descrição
 
