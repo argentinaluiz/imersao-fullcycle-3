@@ -4,9 +4,6 @@ services:
   app:
     build: .
     entrypoint: dockerize -wait tcp://db:5432 -timeout 40s ./.docker/entrypoint.sh
-    build:
-      context: .
-      dockerfile: ./Dockerfile.prod
     container_name: imersao-fullcycle-3-api-app
     ports:
       - 3000:3000
