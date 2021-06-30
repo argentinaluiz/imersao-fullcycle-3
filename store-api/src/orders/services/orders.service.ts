@@ -37,11 +37,13 @@ export class OrdersService {
     let newOrder: Order;
     try {
       newOrder = await queryRunner.manager.save(order);
-
+      
       await this.paymentClient
         .payment({
           creditCard: newOrder.credit_card,
           amount: newOrder.total,
+          store: process.env.STORE_NAME,
+          description: `Produtos: ${products.map((p) => p.name).join(', ')}`,
         })
         .toPromise();
       await queryRunner.manager.update(
@@ -51,6 +53,7 @@ export class OrdersService {
       );
       await queryRunner.commitTransaction();
       newOrder = await this.orderRepo.findOneOrFail(newOrder.id);
+      
     } catch (e) {
       await queryRunner.rollbackTransaction();
       throw e;
