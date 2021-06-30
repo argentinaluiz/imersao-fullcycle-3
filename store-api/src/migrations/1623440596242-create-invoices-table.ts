@@ -29,6 +29,14 @@ export class CreateInvoicesTable1623440596242 implements MigrationInterface {
             type: 'uuid',
           },
           {
+            name: 'store',
+            type: 'varchar',
+          },
+          {
+            name: 'description',
+            type: 'text',
+          },
+          {
             name: 'created_at',
             type: 'timestamp',
             default: 'CURRENT_TIMESTAMP',
