@@ -4,6 +4,7 @@ import {
   IsNotEmpty,
   IsNumber,
   IsString,
+  MaxLength,
   ValidateNested,
 } from 'class-validator';
 import { Exists } from 'src/validations/exists.rule';
@@ -22,6 +23,15 @@ export class CreateInvoiceDto {
   @IsISO8601()
   @IsNotEmpty()
   payment_date: Date;
+
+  @MaxLength(255)
+  @IsString()
+  @IsNotEmpty()
+  store: string;
+
+  @IsString()
+  @IsNotEmpty()
+  description: string;
 }
 
 export class KafkaCreateInvoiceDto {
