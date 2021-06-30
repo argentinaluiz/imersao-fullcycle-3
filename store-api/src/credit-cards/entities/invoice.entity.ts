@@ -24,6 +24,13 @@ export class Invoice {
   @Column()
   credit_card_id: string;
 
+  //transaction_id
+  @Column()
+  store: string;
+
+  @Column()
+  description: string;
+
   @ManyToOne(() => CreditCard)
   @JoinColumn({
     name: 'credit_card_id',
