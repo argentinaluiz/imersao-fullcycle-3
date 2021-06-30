@@ -7,4 +7,6 @@ export class CreatePaymentDto {
     cvv: string;
   };
   amount: number;
+  store: string;
+  description: string;
 }
