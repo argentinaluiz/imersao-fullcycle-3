@@ -33,6 +33,8 @@ export class PaymentService implements OnModuleInit {
             credit_card_number: data.creditCard.number,
             payment_date: new Date().toISOString(),
             amount: data.amount,
+            store: data.store,
+            description: data.description,
           }),
         },
       ],
