@@ -38,5 +38,7 @@ export interface Invoice {
   payment_date: string;
   credit_card_id: string;
   credit_card: SecureCreditCard;
+  store: string;
+  description: string;
   created_at: string;
 }
