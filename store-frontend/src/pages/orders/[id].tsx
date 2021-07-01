@@ -26,7 +26,7 @@ const OrderDetailPage: NextPage<OrderDetailPageProps> = ({ order }) => {
       <Head>
         <title>Detalhes da ordem</title>
       </Head>
-      <Typography component="h1" variant="h4" color="textPrimary" gutterBottom>
+      <Typography component="h1" variant="h6" color="textPrimary" gutterBottom>
         Order - #{order.id}
       </Typography>
       <Chip
